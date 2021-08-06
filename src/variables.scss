@@ -1,0 +1,48 @@
+
+@mixin fontTitle($style, $weight, $size, $height) {
+    font-family: "Montserrat Alternates";
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin fontText($style, $weight, $size, $height) {
+    font-family: "Montserrat";
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin scroll() {
+    &::-webkit-scrollbar-button {
+        background-repeat: no-repeat;
+        width            : 5px;
+        height           : 0px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #F7F9FA;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 5px;
+        border-radius        : 20px;
+        background-color     : #BCD2D6;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #56999f;
+    }
+
+    &::-webkit-resizer {
+        background-repeat: no-repeat;
+        width            : 8px;
+        height           : 0px
+    }
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+}
