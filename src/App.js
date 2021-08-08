@@ -1,23 +1,20 @@
-import './App.scss';
+import React from "react";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import "./App.scss";
+import SitemapPage from "./component/SitemapPage/SitemapPage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <div className="App">
+                <React.Fragment>
+                    <Switch>
+                        <Route path="/sitemapPage" component={SitemapPage} />
+                    </Switch>
+                </React.Fragment>
+            </div>
+        </Router>
+    );
 }
 
 export default App;

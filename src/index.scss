@@ -1,13 +1,98 @@
-body {
+@import "./vendor/montserrat/stylesheet.css";
+@import "./normalize.scss";
+@import "./variables.scss";
+
+
+// основные стили
+
+$title_color_light:#FFFFFF;
+$title_line_color: #00A651;
+
+.title {
+  @include fontText(normal, bold, 36px, 103.69%);
+  text-transform: capitalize;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+
+  &::after {
+    content   : "";
+    display   : block;
+    width     : 64px;
+    height    : 4px;
+    background: $title_color_light;
+    margin-top: 15px;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.title--light {
+  color         : $title_color_light;
+}
+
+.title--h2{
+  @include fontText(normal, 800, 24px, 103.69%);
+
+  margin: 0;
+  text-align: left;
+
+
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  &::before {
+    content   : "";
+    display   : block;
+    width     : 16px;
+    height    : 3px;
+    background: $title_line_color;
+    margin-right: 15px;
+  }
+
+}
+
+.title--small{
+  @include fontText(normal, bold, 18px, 103.69%);
+  margin: 0;
+  text-align: left;
+}
+
+// стиль для фона компонентов
+$back-color:#11357E;
+.back {
+  width: 100%;
+  background-color: $back-color;
+}
+
+.component{
+  width: 100%;
+  max-width: 1300px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: 0 auto;
+  // @media screen and (max-width:1024px) {
+  //     padding: 0 50px;
+  // }
+  @media screen and (max-width:670px) {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+
+}
+// стиль для фона компонентов
+
+
+.mt_0 {
+  margin-top: 0px;
+}
+.mt_15 {
+  margin-top: 15px;
+}
+
+.mb_0 {
+  margin-bottom: 15px;
+}
+.mb_15 {
+  margin-bottom: 15px;
+}
+.mb_40{
+  margin-bottom: 40px;
 }

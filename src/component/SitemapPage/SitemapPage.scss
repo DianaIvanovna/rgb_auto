@@ -1,0 +1,95 @@
+@import "../../variables.scss";
+
+$text_color_light:#FFFFFF;
+
+.sitemap-page {
+
+  padding-top   : 35px;
+  padding-bottom: 35px;
+
+  &__container {
+    display        : flex;
+    width          : 100%;
+    justify-content: space-between;
+    flex-wrap      : wrap;
+
+  }
+
+  &__column {
+    width: 30%;
+
+    &--second {
+      max-width: 180px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: 45%;
+    }
+
+    @media screen and (max-width: 600px) {
+      width        : 100%;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    margin    : 0;
+    padding   : 0;
+    text-align: left;
+
+    &--level-two {
+      padding-left: 40px;
+    }
+
+    &--level-three {
+      padding-left: 20px;
+    }
+  }
+
+  &__li {
+    margin: 15px 0;
+
+    &::before {
+      content         : "";
+      display         : block;
+      width           : 100%;
+      height          : 1px;
+      background-color: #FFFFFF;
+      margin          : 15px 0;
+    }
+
+    &--level-two {
+      @include fontText(normal, normal, 16px, 103.69%);
+      color   : $text_color_light;
+      margin  : 15px 0;
+      position: relative;
+
+      &::before {
+        content      : "";
+        display      : inline-block;
+        position     : absolute;
+        top          : 4px;
+        left         : -15px;
+        width        : 7px;
+        height       : 7px;
+        border-radius: 50%;
+        margin-right : 8px;
+        background   : #FFFFFF;
+      }
+    }
+
+    &--level-three {
+      @include fontText(normal, normal, 16px, 103.69%);
+      color   : $text_color_light;
+      margin  : 10px 0;
+      position: relative;
+
+      &::before {
+        content     : "•";
+        display     : inline-block;
+        margin-right: 5px;
+      }
+    }
+  }
+
+}
