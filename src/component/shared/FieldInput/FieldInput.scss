@@ -1,0 +1,60 @@
+@import "../../../variables.scss";
+
+$input-color              : #838383;
+$input-border-color       : #F5F5F5;
+$input-back-color         : #F5F5F5;
+$input-back-valid-color   : #FFFFFF;
+$input-border-error-color : red;
+$input-border-valid-color :#00A651;
+
+.field-input {
+  background   : $input-back-color;
+  border       : 2px solid $input-border-color;
+  box-sizing   : border-box;
+  border-radius: 5px;
+  height       : 53px;
+  width        : 100%;
+  padding      : 17px 21px;
+  @include fontText(normal, normal, 18px, 103.69%);
+
+
+
+  @media screen and (max-width:600px) {
+    width        : 100%;
+    margin       : 0;
+    margin-bottom: 10px;
+  }
+
+  &.field-input--two-in-row,
+  &.field-input--two-thirds,
+  &.field-input--one-thirds {
+    @media screen and (max-width:600px) {
+      width: 100%;
+    }
+  }
+
+  &--error {
+    border: 2px solid $input-border-error-color;
+    background: $input-back-valid-color;
+  }
+
+  &--valid {
+    background: $input-back-valid-color;
+    border    : 2px solid $input-border-valid-color;
+  }
+
+
+  &.mr-10 {
+    @media screen and (max-width:600px) {
+      margin-right: 0;
+    }
+  }
+
+  &::placeholder {
+    color: $input-color;
+  }
+
+  &:focus {
+    outline: none !important;
+  }
+}

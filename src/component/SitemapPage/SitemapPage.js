@@ -175,7 +175,7 @@ const SitemapPage = () => {
                 <div className="sitemap-page__container">
                     {
                         <div className="sitemap-page__column">
-                            <h2 className="title--h2 title--light">{solutions.text}</h2>
+                            <h2 className="title--h2 title--line  title--light">{solutions.text}</h2>
 
                             {solutions.ul
                                 ? solutions.ul.map((level2, index) => (
@@ -214,7 +214,7 @@ const SitemapPage = () => {
                     }
                     {
                         <div className="sitemap-page__column">
-                            <h2 className="title--h2 title--light">{products.text}</h2>
+                            <h2 className="title--h2 title--line title--light">{products.text}</h2>
 
                             {products.ul
                                 ? products.ul.map((level2, index) => (
@@ -252,13 +252,13 @@ const SitemapPage = () => {
                         </div>
                     }
                     <div className="sitemap-page__column sitemap-page__column--second">
-                        <a href="./" className="title--h2 title--light mb_40">
+                        <a href="./" className="title--h2 title--line title--light mb_40">
                             DEMO
                         </a>
-                        <a href="./" className="title--h2 title--light mb_40">
+                        <a href="./" className="title--h2 title--line title--light mb_40">
                             About
                         </a>
-                        <a href="./" className="title--h2 title--light mb_40">
+                        <a href="./" className="title--h2 title--line title--light mb_40">
                             Contact
                         </a>
                     </div>
