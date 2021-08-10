@@ -18,12 +18,13 @@
 
   &__container {
     display: flex;
+    justify-content: space-between;
   }
   &__form{
-    width: 50%;
+    width: calc(50% - 30px);
   }
   &__contacts {
-    width: 50%;
+    width: calc(50% - 30px);
   }
 
   &__list {
@@ -42,5 +43,10 @@
         display: block;
       }
     }
+  }
+
+  &__image {
+    width: 100%;
+    object-fit:cover;
   }
 }

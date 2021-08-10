@@ -1,0 +1,12 @@
+.contact-us-page__logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  img {
+    width: calc(100% / 4 - 20px);
+    object-fit: contain;
+    height: auto;
+    margin-bottom: 25px;
+  }
+}

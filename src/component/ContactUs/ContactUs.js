@@ -6,6 +6,7 @@ import "./ContactUs.scss";
 import FieldInput from "../shared/FieldInput/FieldInput";
 import Checkbox from "../shared/Checkbox/Checkbox";
 import {SVG} from "../shared/icons";
+import map from "../../image/contact_us/map.png";
 
 const form = Yup.object().shape({
     firstName: Yup.string().required("this is a required field"),
@@ -86,11 +87,13 @@ const ContactUs = () => {
                                 833-7472886
                             </a>
                         </li>
-                        <li>
+                        <li className="mb_40">
                             <SVG id="bi-clock" />
                             <p className="text text--color-basic">Monday–Friday 10AM to 6PM EST</p>
                         </li>
                     </ul>
+                    <p className="title--small title--basic mb_25">Florida 20801 Biscayne Blvd Suite 403 Aventura FL</p>
+                    <img src={map} alt="map" className="contact-us__image" width={478} height={287} />
                 </div>
             </div>
         </div>

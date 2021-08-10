@@ -9,12 +9,14 @@ $title_color_light:#FFFFFF;
 $title_line_color : #00A651;
 $title_color_dark : #001237;
 $title_color_attention: #27488A;
+$title_color_basic: #000000;
 
 .title {
   @include fontText(normal, bold, 36px, 103.69%);
   text-transform: capitalize;
   margin        : 0;
   text-align    : left;
+  position: relative;
 
   &::after {
     content   : "";
@@ -30,6 +32,10 @@ $title_color_attention: #27488A;
     &::after {
       background: $title_color_light;
     }
+  }
+
+  &--basic{
+    color: $title_color_basic;
   }
 
   &--dark {
@@ -56,7 +62,7 @@ $title_color_attention: #27488A;
   text-transform: uppercase;
 }
 
-.title--line {
+.title__line {
   &::before {
     content     : "";
     display     : block;
@@ -64,6 +70,20 @@ $title_color_attention: #27488A;
     height      : 3px;
     background  : $title_line_color;
     margin-right: 15px;
+  }
+
+  &--top {
+    &::after {
+      content     : "";
+      position: absolute;
+      top: -25px;
+      left: 0;
+      display     : block;
+      width       : 64px;
+      height      : 4px;
+      background  : $title_line_color;
+      margin-right: 15px;
+    }
   }
 }
 
